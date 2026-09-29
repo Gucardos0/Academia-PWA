@@ -1,0 +1,230 @@
+/* Configurações base e Rolamento Suave */
+html {
+    scroll-behavior: smooth;
+    /* Evita que o cabeçalho fixo cubra o título da secção ao rolar */
+    scroll-padding-top: 90px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Aumento das Secções para dar mais destaque */
+section {
+    padding: 100px 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffc107;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+/* Secção Hero (aumentada com min-height) */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470') center/cover;
+    color: white;
+    text-align: center;
+    min-height: 80vh; /* Garante que ocupa grande parte do ecrã */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 22px;
+}
+
+/* Títulos das Secções */
+#sobre h2, #modalidades h2, #planos h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 38px;
+}
+
+/* Histórico / Sobre Nós */
+.sobre-texto {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Grelha de Modalidades atualizada para Imagens */
+.grid-modalidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-modalidade {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: transform 0.3s;
+    overflow: hidden; /* Mantém as imagens dentro do cartão com bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-modalidade img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Garante que a imagem não fica distorcida */
+    border-bottom: 4px solid #ffc107;
+}
+
+.card-modalidade h3 {
+    padding: 25px 20px;
+    font-size: 22px;
+}
+
+.card-modalidade:hover {
+    transform: translateY(-8px);
+}
+
+/* Grelha de Planos */
+.grid-planos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.card-plano {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    position: relative;
+}
+
+.card-plano.destaque {
+    background-color: #ffc107;
+    transform: scale(1.05);
+    border: 2px solid #e0a800;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-plano h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.preco span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.card-plano ul {
+    list-style: none;
+    margin-bottom: 40px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.btn-assinar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffc107;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-assinar:hover {
+    background-color: #e0a800;
+}
+
+.destaque .btn-assinar {
+    background-color: white;
+    color: black;
+}
+
+.destaque .btn-assinar:hover {
+    background-color: #f4f4f4;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
